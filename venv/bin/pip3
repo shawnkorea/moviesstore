@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/Users/seonghyunko/Developer/CS 2340/Project 1_CS2340/moviesstore/venv/bin/python3.12" "$0" "$@"
+' '''
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
