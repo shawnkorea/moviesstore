@@ -49,7 +49,7 @@
                href="{% url 'movies.delete_review' id=template_data.movie.id review_id=review.id %}">Delete
             </a>
             {% endif %}
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and user != review.user %}
             <form method="POST"
                   action="{% url 'movies.hidden_review' id=template_data.movie.id review_id=review.id %}">
               {% csrf_token %}
